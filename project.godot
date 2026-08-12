@@ -52,6 +52,10 @@ useItem={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Gounnd"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

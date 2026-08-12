@@ -394,7 +394,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_molhy"]
-radius = 8.0
+radius = 5.0
 
 [node name="Player" type="CharacterBody2D" unique_id=124529871]
 script = ExtResource("1_6avc5")
@@ -406,7 +406,7 @@ animation = &"waterRight"
 autoplay = "idleFront"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1508721568]
-position = Vector2(0, -8)
+position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_molhy")
 
 [node name="StateMachine" type="Node" parent="." unique_id=922260640 node_paths=PackedStringArray("initial_node_state")]
