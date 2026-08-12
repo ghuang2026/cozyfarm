@@ -17,3 +17,8 @@ static func movementInput() -> Vector2:
 
 static func isMovementInput() -> bool:
 	return direction != Vector2.ZERO
+
+static func useItem() -> bool:
+	var isUsingItem: bool = Input.is_action_just_pressed("useItem")
+	
+	return isUsingItem
