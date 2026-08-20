@@ -1,0 +1,19 @@
+[gd_scene format=4 uid="uid://ntkbso6v4c0o"]
+
+[ext_resource type="TileSet" uid="uid://3ql0enslujjg" path="res://tilesets/houseTileset.tres" id="1_wtono"]
+
+[node name="SmallHouse" type="Node2D" unique_id=2070207535]
+
+[node name="HouseTilemap" type="Node2D" parent="." unique_id=301936676]
+
+[node name="Floor" type="TileMapLayer" parent="HouseTilemap" unique_id=546597268]
+tile_map_data = PackedByteArray("AAD+////AAABAAEAAAD/////AAABAAEAAAAAAP//AAABAAEAAAABAP//AAABAAEAAAACAP//AAABAAEAAAD9////AAABAAEAAAD9//7/AAABAAEAAAD9//3/AAABAAEAAAD9//z/AAABAAEAAAD+//z/AAABAAEAAAD///z/AAABAAEAAAAAAPz/AAABAAEAAAABAPz/AAABAAEAAAACAPz/AAABAAEAAAACAP3/AAABAAEAAAACAP7/AAABAAEAAAABAP7/AAABAAEAAAABAP3/AAABAAEAAAAAAP3/AAABAAEAAAD///3/AAABAAEAAAD+//3/AAABAAEAAAD+//7/AAABAAEAAAD///7/AAABAAEAAAAAAP7/AAABAAEAAAA=")
+tile_set = ExtResource("1_wtono")
+
+[node name="Walls" type="TileMapLayer" parent="HouseTilemap" unique_id=1238123941]
+tile_map_data = PackedByteArray("AAAAAP//AAABAAIAAAD/////AAABAAIAAAD+////AAADAAIAAAD9////AAABAAIAAAD8////AAAAAAIAAAD8//7/AAAAAAEAAAD8//3/AAAAAAEAAAD8//z/AAAAAAEAAAD8//v/AAAAAAAAAAD9//v/AAABAAAAAAD+//v/AAABAAAAAAD///v/AAABAAAAAAAAAPv/AAABAAAAAAABAPv/AAADAAIAAAACAPv/AAABAAAAAAADAPv/AAACAAAAAAADAPz/AAACAAEAAAADAP3/AAACAAEAAAADAP7/AAACAAEAAAADAP//AAACAAIAAAACAP//AAABAAIAAAABAP//AgAAAAAAAQA=")
+tile_set = ExtResource("1_wtono")
+
+[node name="Furniture" type="TileMapLayer" parent="HouseTilemap" unique_id=625739195]
+tile_map_data = PackedByteArray("AAD+//z/AQACAAEAAAD9//z/AQAEAAMAAAABAPz/AQADAAMAAAACAPz/AQAFAAIAAAAAAPz/AQAEAAIAAAD///v/AQAHAAMAAAD+//7/AQABAAUAAAABAP7/AQAFAAUAAAACAP7/AQADAAAAAAD+//v/AQABAAAAAAA=")
+tile_set = ExtResource("1_wtono")
