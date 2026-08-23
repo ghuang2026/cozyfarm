@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dk857t8favkmc" path="res://assets/game/objects/grassBiome.png" id="4_7vrqu"]
 [ext_resource type="PackedScene" uid="uid://boi4tjm84mjyg" path="res://scenes/house/largeHouse.tscn" id="5_7vrqu"]
 [ext_resource type="PackedScene" uid="uid://ntkbso6v4c0o" path="res://scenes/house/smallHouse.tscn" id="6_pxb04"]
+[ext_resource type="PackedScene" uid="uid://casxbo4q1bhb7" path="res://scenes/objects/tree/SmallTree.tscn" id="7_djjax"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fg1q5"]
 texture = ExtResource("1_3j575")
@@ -482,6 +483,7 @@ texture = ExtResource("4_7vrqu")
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_pxb04"]
 scenes/1/scene = ExtResource("5_7vrqu")
 scenes/2/scene = ExtResource("6_pxb04")
+scenes/3/scene = ExtResource("7_djjax")
 
 [resource]
 terrain_set_0/mode = 0

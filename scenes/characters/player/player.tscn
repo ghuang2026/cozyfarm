@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://0502w5jefjlf" path="res://scenes/characters/player/chopState.gd" id="7_mk55u"]
 [ext_resource type="Script" uid="uid://cb0a8vblrc885" path="res://scenes/characters/player/tillState.gd" id="7_xuses"]
 [ext_resource type="Script" uid="uid://bykwdxkv4ygqo" path="res://scenes/characters/player/waterState.gd" id="9_42irl"]
+[ext_resource type="PackedScene" uid="uid://b46ospp0s7iv6" path="res://scenes/components/hitComponent.tscn" id="10_3xnwo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hss88"]
 atlas = ExtResource("1_t61fv")
@@ -181,7 +182,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"chopBack",
-"speed": 2.0
+"speed": 2.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -192,7 +193,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"chopFront",
-"speed": 2.0
+"speed": 2.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -203,7 +204,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"chopLeft",
-"speed": 2.0
+"speed": 2.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -214,7 +215,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"chopRight",
-"speed": 2.0
+"speed": 2.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -357,7 +358,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"waterBack",
-"speed": 2.0
+"speed": 2.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -368,7 +369,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"waterFront",
-"speed": 2.0
+"speed": 2.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -379,7 +380,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"waterLeft",
-"speed": 2.0
+"speed": 2.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -390,11 +391,16 @@ animations = [{
 }],
 "loop": 0,
 "name": &"waterRight",
-"speed": 2.0
+"speed": 2.5
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_molhy"]
-radius = 5.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_molhy"]
+radius = 4.0
+height = 12.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_blysn"]
+radius = 4.0
+height = 12.0
 
 [node name="Player" type="CharacterBody2D" unique_id=124529871]
 collision_layer = 2
@@ -403,12 +409,14 @@ script = ExtResource("1_6avc5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1556495751]
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_molhy")
-animation = &"waterRight"
+animation = &"chopLeft"
 autoplay = "idleFront"
+frame = 1
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1508721568]
 position = Vector2(0, -5)
-shape = SubResource("CircleShape2D_molhy")
+shape = SubResource("CapsuleShape2D_molhy")
 
 [node name="StateMachine" type="Node" parent="." unique_id=922260640 node_paths=PackedStringArray("initial_node_state")]
 script = ExtResource("3_hss88")
@@ -438,3 +446,11 @@ animatedSprite2d = NodePath("../../AnimatedSprite2D")
 script = ExtResource("9_42irl")
 player = NodePath("../..")
 animatedSprite2d = NodePath("../../AnimatedSprite2D")
+
+[node name="HitComponent" parent="." unique_id=2058694074 instance=ExtResource("10_3xnwo")]
+currentTool = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitComponent" unique_id=1207331655]
+position = Vector2(0, -5)
+shape = SubResource("CapsuleShape2D_blysn")
+debug_color = Color(0.7895877, 0.264408, 0.84089565, 0.41960785)
