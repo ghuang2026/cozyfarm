@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dc7f0sq3cxjv" path="res://scenes/components/hurtComponent.gd" id="1_xiruk"]
 
 [node name="HurtComponent" type="Area2D" unique_id=1611889556]
+collision_layer = 16
+collision_mask = 8
 script = ExtResource("1_xiruk")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

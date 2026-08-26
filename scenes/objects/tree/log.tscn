@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://csud1hyw12054"]
+
+[ext_resource type="Texture2D" uid="uid://dk857t8favkmc" path="res://assets/game/objects/grassBiome.png" id="1_3sgr7"]
+[ext_resource type="PackedScene" uid="uid://hypmri7lmtcm" path="res://scenes/components/collectableComponent.tscn" id="2_p2mks"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_molhy"]
+height = 26.0
+
+[node name="Log" type="Sprite2D" unique_id=1504389031]
+position = Vector2(0, -2.3841858e-07)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_3sgr7")
+region_enabled = true
+region_rect = Rect2(80, 32, 16, 16)
+
+[node name="collectableComponent" parent="." unique_id=1201512825 instance=ExtResource("2_p2mks")]
+itemTag = "log"
+
+[node name="logCollisionShape2D" type="CollisionShape2D" parent="collectableComponent" unique_id=2056452658]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_molhy")
