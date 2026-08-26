@@ -20,3 +20,6 @@ tile_set = ExtResource("1_dvdor")
 [node name="Player" parent="." unique_id=124529871 instance=ExtResource("2_1x2bd")]
 position = Vector2(285, 351)
 currentTool = 3
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1053448993]
+zoom = Vector2(3, 3)

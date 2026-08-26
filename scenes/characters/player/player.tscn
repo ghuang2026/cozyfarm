@@ -437,10 +437,11 @@ script = ExtResource("7_xuses")
 player = NodePath("../..")
 animatedSprite2d = NodePath("../../AnimatedSprite2D")
 
-[node name="Chop" type="Node" parent="StateMachine" unique_id=1722350427 node_paths=PackedStringArray("player", "animatedSprite2d")]
+[node name="Chop" type="Node" parent="StateMachine" unique_id=1722350427 node_paths=PackedStringArray("player", "animatedSprite2d", "hitComponentCollisionShape")]
 script = ExtResource("7_mk55u")
 player = NodePath("../..")
 animatedSprite2d = NodePath("../../AnimatedSprite2D")
+hitComponentCollisionShape = NodePath("../../HitComponent/HitCollisionShape2D")
 
 [node name="Water" type="Node" parent="StateMachine" unique_id=257111557 node_paths=PackedStringArray("player", "animatedSprite2d")]
 script = ExtResource("9_42irl")
@@ -450,7 +451,7 @@ animatedSprite2d = NodePath("../../AnimatedSprite2D")
 [node name="HitComponent" parent="." unique_id=2058694074 instance=ExtResource("10_3xnwo")]
 currentTool = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitComponent" unique_id=1207331655]
+[node name="HitCollisionShape2D" type="CollisionShape2D" parent="HitComponent" unique_id=1207331655]
 position = Vector2(0, -5)
 shape = SubResource("CapsuleShape2D_blysn")
 debug_color = Color(0.7895877, 0.264408, 0.84089565, 0.41960785)
