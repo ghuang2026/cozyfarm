@@ -4,7 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://hypmri7lmtcm" path="res://scenes/components/collectableComponent.tscn" id="2_p2mks"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_molhy"]
-height = 26.0
+radius = 7.142857
+height = 22.857141
 
 [node name="Log" type="Sprite2D" unique_id=1504389031]
 position = Vector2(0, -2.3841858e-07)
