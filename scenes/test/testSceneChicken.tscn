@@ -45,7 +45,26 @@ zoom = Vector2(3, 3)
 [node name="Chickens" type="Node" parent="." unique_id=311676977]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Chickens" unique_id=176551073]
+position = Vector2(27, -27)
 navigation_polygon = SubResource("NavigationPolygon_molhy")
 
 [node name="Chicken" parent="Chickens" unique_id=939322186 instance=ExtResource("2_mrea0")]
 position = Vector2(251, 286)
+
+[node name="Chicken2" parent="Chickens" unique_id=1154776118 instance=ExtResource("2_mrea0")]
+position = Vector2(259, 322)
+
+[node name="Chicken3" parent="Chickens" unique_id=1563486523 instance=ExtResource("2_mrea0")]
+position = Vector2(227, 300)
+
+[node name="Chicken4" parent="Chickens" unique_id=868321760 instance=ExtResource("2_mrea0")]
+position = Vector2(294, 334)
+
+[node name="Chicken5" parent="Chickens" unique_id=1464758640 instance=ExtResource("2_mrea0")]
+position = Vector2(268, 397)
+
+[node name="Chicken6" parent="Chickens" unique_id=734669476 instance=ExtResource("2_mrea0")]
+position = Vector2(230, 374)
+
+[node name="Chicken7" parent="Chickens" unique_id=1731049973 instance=ExtResource("2_mrea0")]
+position = Vector2(326, 314)

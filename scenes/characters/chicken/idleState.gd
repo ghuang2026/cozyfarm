@@ -1,6 +1,6 @@
 extends NodeState
 
-@export var character: CharacterBody2D
+@export var character: NPC
 @export var animatedSprite2d: AnimatedSprite2D
 @export var idleStateTimeInterval: Array = [4, 6];
 

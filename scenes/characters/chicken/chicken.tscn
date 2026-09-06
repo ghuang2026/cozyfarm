@@ -1,13 +1,10 @@
 [gd_scene format=3 uid="uid://be44jrxahwm01"]
 
+[ext_resource type="Script" uid="uid://b325qit8hdx77" path="res://scenes/characters/chicken/chicken.gd" id="1_31inw"]
 [ext_resource type="Texture2D" uid="uid://c1sadno0xwli0" path="res://assets/game/characters/chickenSprites.png" id="1_be5x3"]
 [ext_resource type="Script" uid="uid://ri5qt7eopil1" path="res://scripts/stateMachine/nodeStateMachine.gd" id="2_rsly8"]
 [ext_resource type="Script" uid="uid://cfxj1454snok6" path="res://scenes/characters/chicken/idleState.gd" id="3_awcwn"]
 [ext_resource type="Script" uid="uid://blrxm3h0bi5od" path="res://scenes/characters/chicken/walkState.gd" id="5_r6a33"]
-
-[sub_resource type="GDScript" id="GDScript_31inw"]
-script/source = "extends CharacterBody2D
-"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rsly8"]
 atlas = ExtResource("1_be5x3")
@@ -74,7 +71,7 @@ radius = 4.0
 
 [node name="Chicken" type="CharacterBody2D" unique_id=939322186]
 position = Vector2(0, -6)
-script = SubResource("GDScript_31inw")
+script = ExtResource("1_31inw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2082314559]
 sprite_frames = SubResource("SpriteFrames_ripjb")
@@ -86,6 +83,8 @@ position = Vector2(-1, 2)
 shape = SubResource("CircleShape2D_molhy")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1066913948]
+avoidance_enabled = true
+radius = 5.0
 debug_enabled = true
 
 [node name="StateMachine" type="Node" parent="." unique_id=1892684560 node_paths=PackedStringArray("initial_node_state")]
