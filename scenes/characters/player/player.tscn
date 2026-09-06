@@ -403,16 +403,15 @@ radius = 4.0
 height = 12.0
 
 [node name="Player" type="CharacterBody2D" unique_id=124529871]
+y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_6avc5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1556495751]
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_molhy")
-animation = &"chopLeft"
+animation = &"idleFront"
 autoplay = "idleFront"
-frame = 1
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1508721568]
 position = Vector2(0, -5)
