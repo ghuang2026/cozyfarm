@@ -3,8 +3,8 @@ extends NodeState
 @export var character : NPC
 @export var animatedSprite2d : AnimatedSprite2D
 @export var navigationAgent2d : NavigationAgent2D
-@export var minSpeed : float = 5.0
-@export var maxSpeed : float = 10.0 
+@export var minSpeed : float = 3.0
+@export var maxSpeed : float = 5.0 
 
 var speed: float
 
@@ -60,10 +60,7 @@ func _on_next_transitions() -> void:
 
 
 func _on_enter() -> void:
-	if randi() % 2:
-		animatedSprite2d.play("Walk1")
-	else:
-		animatedSprite2d.play("Walk2")
+	animatedSprite2d.play("Walk")
 	character.currWalkCycle = 0
 
 
