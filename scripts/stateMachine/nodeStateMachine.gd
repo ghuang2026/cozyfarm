@@ -6,8 +6,10 @@ extends Node
 var node_states : Dictionary = {}
 var current_node_state : NodeState
 var current_node_state_name : String
+var parentNodeName : String
 
 func _ready() -> void:
+	parentNodeName = get_parent().name
 	for child in get_children():
 		if child is NodeState:
 			node_states[child.name.to_lower()] = child
@@ -47,4 +49,4 @@ func transition_to(node_state_name : String) -> void:
 	
 	current_node_state = new_node_state
 	current_node_state_name = current_node_state.name.to_lower()
-	print("Current State: ", current_node_state_name)
+	print(parentNodeName, " Current State: ", current_node_state_name)
