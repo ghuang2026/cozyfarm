@@ -6,7 +6,6 @@ extends NodeState
 @export var minSpeed : float = 5.0
 @export var maxSpeed : float = 10.0 
 
-var rng = RandomNumberGenerator.new()
 var speed: float
 
 func _ready() -> void:
@@ -23,7 +22,7 @@ func characterSetup() -> void:
 func setMovementTarget() -> void:
 	var targetPosition: Vector2 = NavigationServer2D.map_get_random_point(navigationAgent2d.get_navigation_map(), navigationAgent2d.navigation_layers, true)
 	navigationAgent2d.target_position = targetPosition
-	speed = rng.randf_range(minSpeed, maxSpeed)
+	speed = randf_range(minSpeed, maxSpeed)
 
 
 func _on_process(_delta : float) -> void:

@@ -4,7 +4,6 @@ extends Sprite2D
 @onready var hurtComponent: HurtComponent = $HurtComponent
 
 var logScene = preload("res://scenes/objects/tree/log.tscn")
-var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
 	hurtComponent.hurt.connect(onHurt)
@@ -26,7 +25,7 @@ func addLogScene() -> void:
 	for i in range(3):
 		var logInstance = logScene.instantiate() as Node2D
 		logInstance.global_position = global_position.move_toward(
-			Vector2(global_position.x + rng.randf_range(-10.0, 10.0), 
-					global_position.y + rng.randf_range(-10.0, 10.0) + 20),
+			Vector2(global_position.x + randf_range(-10.0, 10.0), 
+					global_position.y + randf_range(-10.0, 10.0) + 20),
 			20)
 		get_parent().add_child(logInstance)

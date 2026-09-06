@@ -6,11 +6,10 @@ extends NodeState
 
 @onready var idleStateTimer : Timer = Timer.new()
 
-var rng = RandomNumberGenerator.new()
 var idleStateTimeout: bool = false
 
 func _ready() -> void:
-	idleStateTimer.wait_time = rng.randf_range(idleStateTimeInterval[0], idleStateTimeInterval[1])
+	idleStateTimer.wait_time = randf_range(idleStateTimeInterval[0], idleStateTimeInterval[1])
 	idleStateTimer.timeout.connect(onIdleStateTimeout)
 	add_child(idleStateTimer)
 
