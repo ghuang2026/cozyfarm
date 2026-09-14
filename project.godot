@@ -23,6 +23,10 @@ window/size/window_height_override=1108
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
 
+[global_group]
+
+navigation_polygon_source_geometry_group=""
+
 [input]
 
 walkUp={
@@ -62,6 +66,7 @@ useItem={
 2d_physics/layer_4="Tool"
 2d_physics/layer_5="Object"
 2d_physics/layer_6="Collectable"
+2d_physics/layer_7="NPC"
 
 [physics]
 

@@ -59,6 +59,7 @@ radius = 6.0
 height = 16.0
 
 [node name="Cow" type="CharacterBody2D" unique_id=2000428485]
+collision_layer = 64
 script = ExtResource("1_sa3qd")
 minWalkCycle = 1
 maxWalkCycle = 3
@@ -76,8 +77,10 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_molhy")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1563682274]
+path_desired_distance = 10.0
 navigation_layers = 2
 avoidance_enabled = true
+debug_enabled = true
 
 [node name="StateMachine" type="Node" parent="." unique_id=1635164234 node_paths=PackedStringArray("initial_node_state")]
 script = ExtResource("3_ilrem")
