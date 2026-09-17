@@ -58,7 +58,7 @@ useItem={
 
 [layer_names]
 
-2d_physics/layer_1="Gounnd"
+2d_physics/layer_1="Ground"
 2d_navigation/layer_1="Chicken Navigation"
 2d_physics/layer_2="Player"
 2d_navigation/layer_2="Cow Navigation"
