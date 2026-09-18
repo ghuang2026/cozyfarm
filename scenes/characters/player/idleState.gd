@@ -3,9 +3,15 @@ extends NodeState
 @export var player: Player
 @export var animatedSprite2d: AnimatedSprite2D
 
-func _on_process(_delta : float) -> void:
-	pass
+var not_on_ui : bool = false
 
+func _on_process(_delta : float) -> void:
+	if not Input.is_action_pressed("useItem"):
+		not_on_ui = false
+
+func _unhandled_input(event):
+	if event.is_action_pressed("useItem"):
+		not_on_ui = true
 
 func _on_physics_process(_delta : float) -> void:
 	if player.playerDirection == Vector2.UP:
@@ -23,16 +29,16 @@ func _on_next_transitions() -> void:
 	if GameInputEvents.isMovementInput():
 		transition.emit("Walk")
 	
-	
-	if GameInputEvents.useItem():	
-		if player.currentTool == DataTypes.Tools.ChopWood:
-			transition.emit("Chop")
+	if not_on_ui:
+		if GameInputEvents.useItem():	
+			if player.currentTool == DataTypes.Tools.ChopWood:
+				transition.emit("Chop")
+				
+			elif player.currentTool == DataTypes.Tools.TillGround:
+				transition.emit("Till")
 			
-		elif player.currentTool == DataTypes.Tools.TillGround:
-			transition.emit("Till")
-		
-		elif player.currentTool == DataTypes.Tools.WaterCrop:
-			transition.emit("Water")
+			elif player.currentTool == DataTypes.Tools.WaterCrop:
+				transition.emit("Water")
 
 
 func _on_enter() -> void:

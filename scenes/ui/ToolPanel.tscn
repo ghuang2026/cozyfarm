@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c44n00immybrv"]
 
 [ext_resource type="Theme" uid="uid://6wtu1nossfrf" path="res://scenes/ui/gameUiTheme.tres" id="1_5m27p"]
+[ext_resource type="Script" uid="uid://b360jj7j5juwn" path="res://scenes/ui/toolPanel.gd" id="2_h8xdd"]
 [ext_resource type="Texture2D" uid="uid://dd33r6i7aeudo" path="res://assets/game/objects/plants.png" id="2_otv57"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0gsfs"]
@@ -44,6 +45,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 theme = ExtResource("1_5m27p")
 theme_type_variation = &"DarkWoodType"
+script = ExtResource("2_h8xdd")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1469144513]
 layout_mode = 2
@@ -93,3 +95,9 @@ layout_mode = 2
 theme_type_variation = &"ToolButton"
 icon = SubResource("AtlasTexture_lt3pv")
 icon_alignment = 1
+
+[connection signal="button_down" from="MarginContainer/HBoxContainer/ToolAxe" to="." method="_on_tool_axe_pressed"]
+[connection signal="button_down" from="MarginContainer/HBoxContainer/ToolHoe" to="." method="_on_tool_hoe_pressed"]
+[connection signal="button_down" from="MarginContainer/HBoxContainer/ToolWateringCan" to="." method="_on_tool_watering_can_pressed"]
+[connection signal="button_down" from="MarginContainer/HBoxContainer/SeedCorn" to="." method="_on_seed_corn_pressed"]
+[connection signal="button_down" from="MarginContainer/HBoxContainer/SeedTomato" to="." method="_on_seed_tomato_pressed"]
