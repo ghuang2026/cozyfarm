@@ -1,0 +1,66 @@
+[gd_resource type="Theme" format=3 uid="uid://6wtu1nossfrf"]
+
+[ext_resource type="Texture2D" uid="uid://cqd6vks6axaij" path="res://assets/ui/uiSprites.png" id="1_rvcwc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qp3q6"]
+texture = ExtResource("1_rvcwc")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+region_rect = Rect2(153, 105, 30, 30)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dluym"]
+load_path = "res://.godot/imported/uiSprites.png-ee28bede44496992e9fec5e8e2480de5.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_36h3s"]
+texture = SubResource("CompressedTexture2D_dluym")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(107, 11, 26, 26)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qp3q6"]
+load_path = "res://.godot/imported/uiSprites.png-ee28bede44496992e9fec5e8e2480de5.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_udbwb"]
+texture = SubResource("CompressedTexture2D_qp3q6")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(107, 155, 26, 26)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rvcwc"]
+load_path = "res://.godot/imported/uiSprites.png-ee28bede44496992e9fec5e8e2480de5.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dluym"]
+texture = SubResource("CompressedTexture2D_rvcwc")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(59, 107, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y67ya"]
+texture = ExtResource("1_rvcwc")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(107, 107, 26, 26)
+
+[resource]
+DarkWoodType/base_type = &"PanelContainer"
+DarkWoodType/styles/panel = SubResource("StyleBoxTexture_qp3q6")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+ToolButton/base_type = &"Button"
+ToolButton/styles/disabled = SubResource("StyleBoxTexture_36h3s")
+ToolButton/styles/focus = SubResource("StyleBoxTexture_udbwb")
+ToolButton/styles/hover = SubResource("StyleBoxTexture_dluym")
+ToolButton/styles/normal = SubResource("StyleBoxTexture_y67ya")
+ToolButton/styles/pressed = SubResource("StyleBoxTexture_udbwb")
