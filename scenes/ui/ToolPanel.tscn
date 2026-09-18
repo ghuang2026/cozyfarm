@@ -38,9 +38,10 @@ atlas = SubResource("CompressedTexture2D_flnh2")
 region = Rect2(0, 16, 16, 16)
 
 [node name="ToolPanel" type="PanelContainer" unique_id=1498580100]
-custom_maximum_size = Vector2(168, 48)
 offset_right = 168.0
 offset_bottom = 48.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 theme = ExtResource("1_5m27p")
 theme_type_variation = &"DarkWoodType"
 
