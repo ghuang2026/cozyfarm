@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c44n00immybrv"]
 
-[ext_resource type="Theme" uid="uid://6wtu1nossfrf" path="res://scenes/ui/gameUiTheme.tres" id="1_0gsfs"]
-[ext_resource type="Texture2D" uid="uid://dd33r6i7aeudo" path="res://assets/game/objects/plants.png" id="2_xtjp6"]
+[ext_resource type="Theme" uid="uid://6wtu1nossfrf" path="res://scenes/ui/gameUiTheme.tres" id="1_5m27p"]
+[ext_resource type="Texture2D" uid="uid://dd33r6i7aeudo" path="res://assets/game/objects/plants.png" id="2_otv57"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0gsfs"]
 load_path = "res://.godot/imported/toolsMaterials.png-8a642011dd24f6674ccf746b19d74e57.ctex"
@@ -27,7 +27,7 @@ region = Rect2(0, 0, 17, 16)
 margin = Rect2(1.5, 0, 0, 0)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g8g1o"]
-atlas = ExtResource("2_xtjp6")
+atlas = ExtResource("2_otv57")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_flnh2"]
@@ -38,10 +38,10 @@ atlas = SubResource("CompressedTexture2D_flnh2")
 region = Rect2(0, 16, 16, 16)
 
 [node name="ToolPanel" type="PanelContainer" unique_id=1498580100]
-custom_maximum_size = Vector2(-1, 48)
-offset_right = 104.0
-offset_bottom = 60.0
-theme = ExtResource("1_0gsfs")
+custom_maximum_size = Vector2(168, 48)
+offset_right = 168.0
+offset_bottom = 48.0
+theme = ExtResource("1_5m27p")
 theme_type_variation = &"DarkWoodType"
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1469144513]
