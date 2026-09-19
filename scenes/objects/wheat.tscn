@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cb0dql2kp1h41"]
+
+[ext_resource type="Texture2D" uid="uid://dd33r6i7aeudo" path="res://assets/game/objects/plants.png" id="1_4bm26"]
+[ext_resource type="PackedScene" uid="uid://hypmri7lmtcm" path="res://scenes/components/collectableComponent.tscn" id="2_0ifl4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_molhy"]
+
+[node name="wheat" type="Sprite2D" unique_id=1811354031]
+y_sort_enabled = true
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_4bm26")
+hframes = 6
+vframes = 2
+frame = 5
+
+[node name="collectableComponent" parent="." unique_id=1201512825 instance=ExtResource("2_0ifl4")]
+itemTag = "wheat_spike"
+
+[node name="wheatCollisionShape" type="CollisionShape2D" parent="collectableComponent" unique_id=1332895608]
+shape = SubResource("CircleShape2D_molhy")

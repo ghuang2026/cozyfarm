@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://67v3t6i6u0gy"]
+
+[ext_resource type="Texture2D" uid="uid://dd33r6i7aeudo" path="res://assets/game/objects/plants.png" id="1_n1ylb"]
+[ext_resource type="PackedScene" uid="uid://hypmri7lmtcm" path="res://scenes/components/collectableComponent.tscn" id="2_smv64"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_molhy"]
+radius = 8.0
+
+[node name="tomato" type="Sprite2D" unique_id=1870601753]
+y_sort_enabled = true
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_n1ylb")
+hframes = 6
+vframes = 2
+frame = 11
+
+[node name="collectableComponent" parent="." unique_id=1201512825 instance=ExtResource("2_smv64")]
+itemTag = "tomato_fruit"
+
+[node name="tomatoCollisionShape" type="CollisionShape2D" parent="collectableComponent" unique_id=1473198496]
+shape = SubResource("CircleShape2D_molhy")
