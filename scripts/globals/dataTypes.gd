@@ -5,6 +5,6 @@ enum Tools{
 	ChopWood,
 	TillGround,
 	WaterCrop,
-	PlantCorn,
+	PlantWheat,
 	PlantTomato
 }
