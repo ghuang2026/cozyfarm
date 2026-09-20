@@ -16,6 +16,7 @@ scale = Vector2(0.6875, 0.625)
 texture = SubResource("AtlasTexture_vb33k")
 
 [node name="collectableComponent" parent="." unique_id=1201512825 instance=ExtResource("2_toxh1")]
+itemTag = "stone"
 
 [node name="collectableCollision" type="CollisionShape2D" parent="collectableComponent" unique_id=843376647]
 position = Vector2(-0.72727215, -1.5999993)

@@ -32,11 +32,11 @@ func _on_tool_watering_can_pressed() -> void:
 		tool_watering_can.grab_focus()
 
 func _on_seed_corn_pressed() -> void:
-	if ToolManager.selected_tool == DataTypes.Tools.PlantCorn:
+	if ToolManager.selected_tool == DataTypes.Tools.PlantWheat:
 		ToolManager.select_tool(DataTypes.Tools.None)
 		seed_corn.release_focus()
 	else:
-		ToolManager.select_tool(DataTypes.Tools.PlantCorn)
+		ToolManager.select_tool(DataTypes.Tools.PlantWheat)
 		seed_corn.grab_focus()
 
 func _on_seed_tomato_pressed() -> void:

@@ -5,5 +5,6 @@ extends Area2D
 
 func _onBodyEntered(body: Node2D) -> void:
 	if body is Player:
+		InventoryManager.add_collectable(itemTag)
 		print("collected " + itemTag)
 		get_parent().queue_free()
