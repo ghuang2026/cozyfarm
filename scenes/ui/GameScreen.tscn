@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://6wtu1nossfrf" path="res://scenes/ui/gameUiTheme.tres" id="1_neq6m"]
 [ext_resource type="PackedScene" uid="uid://c44n00immybrv" path="res://scenes/ui/ToolPanel.tscn" id="2_0og60"]
+[ext_resource type="PackedScene" uid="uid://cgj1lpd5313me" path="res://scenes/ui/time_panel.tscn" id="2_g6fxu"]
 [ext_resource type="PackedScene" uid="uid://b4mamo3wuacmx" path="res://scenes/ui/inventory.tscn" id="2_vitkj"]
 
 [node name="GameScreen" type="CanvasLayer" unique_id=1339658237]
@@ -13,6 +14,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_neq6m")
+
+[node name="TimePanel" parent="MarginContainer" unique_id=309798929 instance=ExtResource("2_g6fxu")]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
 [node name="InventoryPanel" parent="MarginContainer" unique_id=1390226198 instance=ExtResource("2_vitkj")]
 layout_mode = 2

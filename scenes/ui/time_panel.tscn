@@ -1,0 +1,193 @@
+[gd_scene format=3 uid="uid://cgj1lpd5313me"]
+
+[ext_resource type="Theme" uid="uid://6wtu1nossfrf" path="res://scenes/ui/gameUiTheme.tres" id="1_qqp6x"]
+[ext_resource type="Texture2D" uid="uid://cqd6vks6axaij" path="res://assets/ui/uiSprites.png" id="2_ryvhp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_molhy"]
+atlas = ExtResource("2_ryvhp")
+region = Rect2(245, 2, 7, 12)
+
+[node name="TimePanel" type="Control" unique_id=309798929]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("1_qqp6x")
+
+[node name="DayTimeCounter" type="PanelContainer" parent="." unique_id=1502121023]
+layout_mode = 1
+offset_right = 98.0
+offset_bottom = 60.0
+theme = ExtResource("1_qqp6x")
+theme_type_variation = &"TimeDisplayPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="DayTimeCounter" unique_id=1341983974]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -8)
+offset_transform_scale = Vector2(0.5, 0.5)
+theme = ExtResource("1_qqp6x")
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="Day" type="Label" parent="DayTimeCounter/MarginContainer" unique_id=1808971289]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -17)
+theme = ExtResource("1_qqp6x")
+theme_type_variation = &"TimeLabel"
+text = "Jan 31"
+horizontal_alignment = 1
+
+[node name="Time" type="Label" parent="DayTimeCounter/MarginContainer" unique_id=1802548901]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 52)
+theme = ExtResource("1_qqp6x")
+theme_type_variation = &"TimeLabel"
+text = "00:00"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="." unique_id=1532627338]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NormalSpeedButton" type="Button" parent="Control" unique_id=576357086]
+layout_mode = 0
+offset_top = 61.0
+offset_right = 30.0
+offset_bottom = 81.0
+theme_type_variation = &"DayNightButton"
+
+[node name="TextureRect" type="TextureRect" parent="Control/NormalSpeedButton" unique_id=243766007]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3.5
+offset_top = -6.0
+offset_right = 3.5
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+texture = SubResource("AtlasTexture_molhy")
+stretch_mode = 3
+
+[node name="2xSpeedButton" type="Button" parent="Control" unique_id=883823770]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 61.0
+offset_right = 64.0
+offset_bottom = 81.0
+theme_type_variation = &"DayNightButton"
+
+[node name="TextureRect" type="TextureRect" parent="Control/2xSpeedButton" unique_id=1645615660]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.5
+offset_top = -6.0
+offset_right = 5.5
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+texture = SubResource("AtlasTexture_molhy")
+stretch_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="Control/2xSpeedButton" unique_id=1705691493]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.5
+offset_top = -6.0
+offset_right = 1.5
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+texture = SubResource("AtlasTexture_molhy")
+stretch_mode = 3
+
+[node name="3xSpeedButton" type="Button" parent="Control" unique_id=245942812]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 61.0
+offset_right = 98.0
+offset_bottom = 81.0
+theme_type_variation = &"DayNightButton"
+
+[node name="TextureRect" type="TextureRect" parent="Control/3xSpeedButton" unique_id=33313573]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 0.5
+offset_top = -6.0
+offset_right = 7.5
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+texture = SubResource("AtlasTexture_molhy")
+stretch_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="Control/3xSpeedButton" unique_id=1520242026]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3.5
+offset_top = -6.0
+offset_right = 3.5
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+texture = SubResource("AtlasTexture_molhy")
+stretch_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="Control/3xSpeedButton" unique_id=82048515]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -7.5
+offset_top = -6.0
+offset_right = -0.5
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+texture = SubResource("AtlasTexture_molhy")
+stretch_mode = 3
