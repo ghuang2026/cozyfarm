@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://djqpr2586xi68" path="res://scenes/ui/GameScreen.tscn" id="1_da1xc"]
 [ext_resource type="TileSet" uid="uid://dntf1v6em3ecw" path="res://tilesets/gameTileset.tres" id="1_mt6yi"]
 [ext_resource type="PackedScene" uid="uid://4ewegfhl6r7n" path="res://scenes/characters/player/player.tscn" id="2_da1xc"]
+[ext_resource type="PackedScene" uid="uid://b45ohue176uw4" path="res://scenes/components/dayNightCycleComponent.tscn" id="4_wfgjy"]
 
 [node name="TestSceneTilemap" type="Node2D" unique_id=344791666]
 
@@ -25,3 +26,5 @@ position = Vector2(285, 351)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1053448993]
 zoom = Vector2(3, 3)
+
+[node name="DayNightCycleComponent" parent="." unique_id=1417850443 instance=ExtResource("4_wfgjy")]
