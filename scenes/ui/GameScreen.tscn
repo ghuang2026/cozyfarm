@@ -17,7 +17,6 @@ theme = ExtResource("1_neq6m")
 
 [node name="TimePanel" parent="MarginContainer" unique_id=309798929 instance=ExtResource("2_g6fxu")]
 layout_mode = 2
-size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="InventoryPanel" parent="MarginContainer" unique_id=1390226198 instance=ExtResource("2_vitkj")]

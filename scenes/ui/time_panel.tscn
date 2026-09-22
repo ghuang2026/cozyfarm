@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cgj1lpd5313me"]
 
 [ext_resource type="Theme" uid="uid://6wtu1nossfrf" path="res://scenes/ui/gameUiTheme.tres" id="1_qqp6x"]
+[ext_resource type="Script" uid="uid://dpf74gknmw4fc" path="res://scenes/ui/time_panel.gd" id="2_hu88u"]
 [ext_resource type="Texture2D" uid="uid://cqd6vks6axaij" path="res://assets/ui/uiSprites.png" id="2_ryvhp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_molhy"]
@@ -9,14 +10,18 @@ region = Rect2(245, 2, 7, 12)
 
 [node name="TimePanel" type="Control" unique_id=309798929]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
 size_flags_horizontal = 8
 size_flags_vertical = 4
 theme = ExtResource("1_qqp6x")
+script = ExtResource("2_hu88u")
 
 [node name="DayTimeCounter" type="PanelContainer" parent="." unique_id=1502121023]
 layout_mode = 1
-offset_right = 98.0
+offset_left = -98.0
 offset_bottom = 60.0
 theme = ExtResource("1_qqp6x")
 theme_type_variation = &"TimeDisplayPanel"
@@ -57,8 +62,9 @@ offset_bottom = 40.0
 
 [node name="NormalSpeedButton" type="Button" parent="Control" unique_id=576357086]
 layout_mode = 0
+offset_left = -98.0
 offset_top = 61.0
-offset_right = 30.0
+offset_right = -68.0
 offset_bottom = 81.0
 theme_type_variation = &"DayNightButton"
 
@@ -81,15 +87,15 @@ offset_transform_enabled = true
 texture = SubResource("AtlasTexture_molhy")
 stretch_mode = 3
 
-[node name="2xSpeedButton" type="Button" parent="Control" unique_id=883823770]
+[node name="FastSpeedButton" type="Button" parent="Control" unique_id=883823770]
 layout_mode = 0
-offset_left = 34.0
+offset_left = -64.0
 offset_top = 61.0
-offset_right = 64.0
+offset_right = -34.0
 offset_bottom = 81.0
 theme_type_variation = &"DayNightButton"
 
-[node name="TextureRect" type="TextureRect" parent="Control/2xSpeedButton" unique_id=1645615660]
+[node name="TextureRect" type="TextureRect" parent="Control/FastSpeedButton" unique_id=1645615660]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -108,7 +114,7 @@ offset_transform_enabled = true
 texture = SubResource("AtlasTexture_molhy")
 stretch_mode = 3
 
-[node name="TextureRect2" type="TextureRect" parent="Control/2xSpeedButton" unique_id=1705691493]
+[node name="TextureRect2" type="TextureRect" parent="Control/FastSpeedButton" unique_id=1705691493]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -127,15 +133,14 @@ offset_transform_enabled = true
 texture = SubResource("AtlasTexture_molhy")
 stretch_mode = 3
 
-[node name="3xSpeedButton" type="Button" parent="Control" unique_id=245942812]
+[node name="VeryFastSpeedButton" type="Button" parent="Control" unique_id=245942812]
 layout_mode = 0
-offset_left = 68.0
+offset_left = -30.0
 offset_top = 61.0
-offset_right = 98.0
 offset_bottom = 81.0
 theme_type_variation = &"DayNightButton"
 
-[node name="TextureRect" type="TextureRect" parent="Control/3xSpeedButton" unique_id=33313573]
+[node name="TextureRect" type="TextureRect" parent="Control/VeryFastSpeedButton" unique_id=33313573]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -154,7 +159,7 @@ offset_transform_enabled = true
 texture = SubResource("AtlasTexture_molhy")
 stretch_mode = 3
 
-[node name="TextureRect2" type="TextureRect" parent="Control/3xSpeedButton" unique_id=1520242026]
+[node name="TextureRect2" type="TextureRect" parent="Control/VeryFastSpeedButton" unique_id=1520242026]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -173,7 +178,7 @@ offset_transform_enabled = true
 texture = SubResource("AtlasTexture_molhy")
 stretch_mode = 3
 
-[node name="TextureRect3" type="TextureRect" parent="Control/3xSpeedButton" unique_id=82048515]
+[node name="TextureRect3" type="TextureRect" parent="Control/VeryFastSpeedButton" unique_id=82048515]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -191,3 +196,7 @@ size_flags_vertical = 4
 offset_transform_enabled = true
 texture = SubResource("AtlasTexture_molhy")
 stretch_mode = 3
+
+[connection signal="pressed" from="Control/NormalSpeedButton" to="." method="_on_normal_speed_button_pressed"]
+[connection signal="pressed" from="Control/FastSpeedButton" to="." method="_on_fast_speed_button_pressed"]
+[connection signal="pressed" from="Control/VeryFastSpeedButton" to="." method="_on_very_fast_speed_button_pressed"]
