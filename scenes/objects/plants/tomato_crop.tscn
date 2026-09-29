@@ -12,11 +12,14 @@ radius = 6.0
 height = 16.0
 
 [node name="Tomato" type="Node2D" unique_id=1571935349]
+y_sort_enabled = true
 script = ExtResource("1_xavgp")
 
 [node name="FloweringParticles" parent="." unique_id=137857367 instance=ExtResource("2_y6dyr")]
+visible = false
 
 [node name="WateringParticles" parent="." unique_id=350715460 instance=ExtResource("3_ffm54")]
+visible = false
 
 [node name="TomatoSprite" type="Sprite2D" parent="." unique_id=1236368654]
 position = Vector2(0, -5)

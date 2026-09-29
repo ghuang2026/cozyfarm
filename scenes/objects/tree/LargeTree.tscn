@@ -26,21 +26,22 @@ height = 16.0
 
 [node name="LargeTree" type="Sprite2D" unique_id=2139250975]
 material = SubResource("ShaderMaterial_o4jt5")
-position = Vector2(0, -12)
+position = Vector2(0, -4)
 texture = SubResource("AtlasTexture_t5jjn")
+offset = Vector2(0, -10)
 script = ExtResource("2_o4jt5")
 
 [node name="HurtComponent" parent="." unique_id=1611889556 instance=ExtResource("2_esw8l")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=419000621]
-position = Vector2(0, 5)
+position = Vector2(0, -4)
 shape = SubResource("CapsuleShape2D_8aqnt")
 debug_color = Color(0.75389695, 0.30166158, 0.8585689, 0.41960785)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=783510415]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1641952680]
-position = Vector2(0, 7)
+position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_molhy")
 
 [node name="damageComponent" parent="." unique_id=484189649 instance=ExtResource("3_esw8l")]

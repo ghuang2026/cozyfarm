@@ -22,8 +22,9 @@ height = 14.0
 
 [node name="SmallTree" type="Sprite2D" unique_id=1181842136]
 material = SubResource("ShaderMaterial_vcdc1")
-position = Vector2(0, -9)
+position = Vector2(0, -3)
 texture = ExtResource("1_163o3")
+offset = Vector2(0, -8)
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 32)
 script = ExtResource("2_tpw7l")
@@ -31,13 +32,13 @@ script = ExtResource("2_tpw7l")
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=683932028]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1877383016]
-position = Vector2(0, 6)
+position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_molhy")
 
 [node name="HurtComponent" parent="." unique_id=1611889556 instance=ExtResource("3_tpw7l")]
 
 [node name="HurtCollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=2034438567]
-position = Vector2(0, 5)
+position = Vector2(0, -4)
 shape = SubResource("CapsuleShape2D_8aqnt")
 debug_color = Color(0.84627014, 0.16901734, 0.8225396, 0.41960785)
 

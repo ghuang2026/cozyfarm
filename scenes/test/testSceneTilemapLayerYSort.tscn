@@ -2,6 +2,8 @@
 
 [ext_resource type="TileSet" uid="uid://dntf1v6em3ecw" path="res://tilesets/gameTileset.tres" id="1_1kx2d"]
 [ext_resource type="PackedScene" uid="uid://4ewegfhl6r7n" path="res://scenes/characters/player/player.tscn" id="2_kbkp5"]
+[ext_resource type="PackedScene" uid="uid://0abf3d4mrt57" path="res://scenes/objects/plants/wheat_crop.tscn" id="3_u3wnb"]
+[ext_resource type="PackedScene" uid="uid://noq3iq0eixfi" path="res://scenes/objects/plants/tomato_crop.tscn" id="4_0k7j4"]
 
 [node name="TestSceneTilemapLayerYSort" type="Node2D" unique_id=344791666]
 y_sort_enabled = true
@@ -38,3 +40,18 @@ currentTool = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=2016461231]
 zoom = Vector2(3, 3)
+
+[node name="Crops" type="Node2D" parent="." unique_id=1581002638]
+y_sort_enabled = true
+
+[node name="Tomato" parent="Crops" unique_id=1953429753 instance=ExtResource("4_0k7j4")]
+position = Vector2(282, 426)
+
+[node name="Tomato2" parent="Crops" unique_id=1571935349 instance=ExtResource("4_0k7j4")]
+position = Vector2(282, 411)
+
+[node name="Wheat" parent="Crops" unique_id=425478273 instance=ExtResource("3_u3wnb")]
+position = Vector2(262, 426)
+
+[node name="Wheat2" parent="Crops" unique_id=213589830 instance=ExtResource("3_u3wnb")]
+position = Vector2(262, 411)
