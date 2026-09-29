@@ -26,7 +26,7 @@ tile_set = ExtResource("2_hmavr")
 position = Vector2(285, 351)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1053448993]
-zoom = Vector2(3, 3)
+zoom = Vector2(5, 5)
 
 [node name="DayNightCycleComponent" parent="." unique_id=1417850443 instance=ExtResource("4_xexrg")]
 visible = false
