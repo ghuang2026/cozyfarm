@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://4ewegfhl6r7n" path="res://scenes/characters/player/player.tscn" id="3_7753n"]
 [ext_resource type="PackedScene" uid="uid://b45ohue176uw4" path="res://scenes/components/dayNightCycleComponent.tscn" id="4_xexrg"]
 [ext_resource type="PackedScene" uid="uid://0abf3d4mrt57" path="res://scenes/objects/plants/wheat_crop.tscn" id="5_hmavr"]
+[ext_resource type="PackedScene" uid="uid://noq3iq0eixfi" path="res://scenes/objects/plants/tomato_crop.tscn" id="6_7753n"]
 
 [node name="TestSceneTilemap" type="Node2D" unique_id=344791666]
 
@@ -33,3 +34,6 @@ visible = false
 
 [node name="Wheat" parent="." unique_id=1571935349 instance=ExtResource("5_hmavr")]
 position = Vector2(281, 268)
+
+[node name="Tomato" parent="." unique_id=40547668 instance=ExtResource("6_7753n")]
+position = Vector2(306, 268)
