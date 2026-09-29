@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://0abf3d4mrt57"]
+
+[ext_resource type="Script" uid="uid://bthhfuxkdwxf5" path="res://scenes/objects/plants/wheat_crop.gd" id="1_4h3v6"]
+[ext_resource type="Texture2D" uid="uid://dd33r6i7aeudo" path="res://assets/game/objects/plants.png" id="1_8aa77"]
+[ext_resource type="PackedScene" uid="uid://dm23jcejx1ljd" path="res://scenes/objects/plants/flowering_particles.tscn" id="1_48yxu"]
+[ext_resource type="PackedScene" uid="uid://cvywcat4siw0t" path="res://scenes/objects/plants/watering_particles.tscn" id="1_rapox"]
+[ext_resource type="PackedScene" uid="uid://bsc4x8i37j376" path="res://scenes/components/hurtComponent.tscn" id="2_rapox"]
+[ext_resource type="PackedScene" uid="uid://win8e7c2uyp8" path="res://scenes/objects/plants/growth_component.tscn" id="6_ifhj7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8aqnt"]
+radius = 6.0
+height = 16.0
+
+[node name="Wheat" type="Node2D" unique_id=1571935349]
+script = ExtResource("1_4h3v6")
+
+[node name="FloweringParticles" parent="." unique_id=137857367 instance=ExtResource("1_48yxu")]
+visible = false
+
+[node name="WateringParticles" parent="." unique_id=350715460 instance=ExtResource("1_rapox")]
+visible = false
+
+[node name="WheatSprite" type="Sprite2D" parent="." unique_id=1236368654]
+position = Vector2(0, -3)
+texture = ExtResource("1_8aa77")
+hframes = 6
+vframes = 2
+frame = 1
+
+[node name="HurtComponent" parent="." unique_id=1611889556 instance=ExtResource("2_rapox")]
+tool = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=1986197954]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_8aqnt")
+
+[node name="GrowthComponent" parent="." unique_id=92886902 instance=ExtResource("6_ifhj7")]

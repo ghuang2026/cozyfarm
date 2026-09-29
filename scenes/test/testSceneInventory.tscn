@@ -4,11 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://djqpr2586xi68" path="res://scenes/ui/GameScreen.tscn" id="1_dlbgu"]
 [ext_resource type="PackedScene" uid="uid://4ewegfhl6r7n" path="res://scenes/characters/player/player.tscn" id="2_dlbgu"]
 [ext_resource type="PackedScene" uid="uid://c0vl5etiy87dh" path="res://scenes/objects/rock/stone.tscn" id="3_3ppj3"]
-[ext_resource type="PackedScene" uid="uid://q25acev0bsvm" path="res://scenes/objects/milk.tscn" id="4_456o4"]
+[ext_resource type="PackedScene" uid="uid://q25acev0bsvm" path="res://scenes/objects/plants/milk.tscn" id="4_456o4"]
 [ext_resource type="PackedScene" uid="uid://csud1hyw12054" path="res://scenes/objects/tree/log.tscn" id="5_h6up0"]
-[ext_resource type="PackedScene" uid="uid://bityayygap8b2" path="res://scenes/objects/egg.tscn" id="6_huvra"]
-[ext_resource type="PackedScene" uid="uid://67v3t6i6u0gy" path="res://scenes/objects/tomato.tscn" id="7_kbgde"]
-[ext_resource type="PackedScene" uid="uid://cb0dql2kp1h41" path="res://scenes/objects/wheat.tscn" id="8_36grr"]
+[ext_resource type="PackedScene" uid="uid://bityayygap8b2" path="res://scenes/objects/plants/egg.tscn" id="6_huvra"]
+[ext_resource type="PackedScene" uid="uid://67v3t6i6u0gy" path="res://scenes/objects/plants/wheat.tscn" id="7_kbgde"]
 
 [node name="TestSceneInventory" type="Node2D" unique_id=344791666]
 
@@ -61,6 +60,3 @@ position = Vector2(360, 383)
 
 [node name="tomato" parent="Collectables" unique_id=1870601753 instance=ExtResource("7_kbgde")]
 position = Vector2(407.00003, 383)
-
-[node name="wheat" parent="Collectables" unique_id=1811354031 instance=ExtResource("8_36grr")]
-position = Vector2(418, 383)
