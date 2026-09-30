@@ -32,6 +32,7 @@ window/stretch/aspect="keep_height"
 [global_group]
 
 navigation_polygon_source_geometry_group=""
+player=""
 
 [input]
 
