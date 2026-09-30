@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b6wk3nit5lmox" path="res://scenes/components/field_cursor_component.tscn" id="1_c2013"]
 [ext_resource type="PackedScene" uid="uid://djqpr2586xi68" path="res://scenes/ui/GameScreen.tscn" id="1_maj3y"]
 [ext_resource type="TileSet" uid="uid://dntf1v6em3ecw" path="res://tilesets/gameTileset.tres" id="2_c2013"]
+[ext_resource type="PackedScene" uid="uid://dk365eiajltct" path="res://scenes/components/crop_cursor_component.tscn" id="2_maj3y"]
 [ext_resource type="PackedScene" uid="uid://4ewegfhl6r7n" path="res://scenes/characters/player/player.tscn" id="3_q0cb8"]
 [ext_resource type="PackedScene" uid="uid://b45ohue176uw4" path="res://scenes/components/dayNightCycleComponent.tscn" id="4_qpdqc"]
 
@@ -10,6 +11,9 @@
 
 [node name="FieldCursorComponent" parent="." unique_id=166380603 node_paths=PackedStringArray("grass", "tilled_dirt") instance=ExtResource("1_c2013")]
 grass = NodePath("../GameTilemap/Grass")
+tilled_dirt = NodePath("../GameTilemap/TilledDirt")
+
+[node name="CropCursorComponent" parent="." unique_id=1884231222 node_paths=PackedStringArray("tilled_dirt") instance=ExtResource("2_maj3y")]
 tilled_dirt = NodePath("../GameTilemap/TilledDirt")
 
 [node name="GameScreen" parent="." unique_id=1339658237 instance=ExtResource("1_maj3y")]
