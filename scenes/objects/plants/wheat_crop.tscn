@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cvywcat4siw0t" path="res://scenes/objects/plants/watering_particles.tscn" id="1_rapox"]
 [ext_resource type="PackedScene" uid="uid://bsc4x8i37j376" path="res://scenes/components/hurtComponent.tscn" id="2_rapox"]
 [ext_resource type="PackedScene" uid="uid://win8e7c2uyp8" path="res://scenes/objects/plants/growth_component.tscn" id="6_ifhj7"]
+[ext_resource type="PackedScene" uid="uid://ka3xk7tew6b7" path="res://scenes/components/save_data_component.tscn" id="7_3r6bg"]
+[ext_resource type="Resource" uid="uid://cf76w6uuv0n4k" path="res://resources/scene_data_resource.tres" id="8_c45gp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8aqnt"]
 radius = 6.0
@@ -36,3 +38,6 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_8aqnt")
 
 [node name="GrowthComponent" parent="." unique_id=92886902 instance=ExtResource("6_ifhj7")]
+
+[node name="SaveDataComponent" parent="." unique_id=251157095 instance=ExtResource("7_3r6bg")]
+save_data_resource = ExtResource("8_c45gp")

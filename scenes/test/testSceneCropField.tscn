@@ -6,6 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://dk365eiajltct" path="res://scenes/components/crop_cursor_component.tscn" id="2_maj3y"]
 [ext_resource type="PackedScene" uid="uid://4ewegfhl6r7n" path="res://scenes/characters/player/player.tscn" id="3_q0cb8"]
 [ext_resource type="PackedScene" uid="uid://b45ohue176uw4" path="res://scenes/components/dayNightCycleComponent.tscn" id="4_qpdqc"]
+[ext_resource type="PackedScene" uid="uid://ka3xk7tew6b7" path="res://scenes/components/save_data_component.tscn" id="5_v35am"]
+[ext_resource type="Resource" uid="uid://cyle1rvvr0efy" path="res://resources/tilemap_layer_data_resource.tres" id="6_bddfb"]
+[ext_resource type="PackedScene" uid="uid://br1rjj25xt6d0" path="res://scenes/components/save_level_data_component.tscn" id="7_q0cb8"]
+[ext_resource type="Script" uid="uid://bovtluqgss5vd" path="res://scenes/components/save_level_data_component.gd" id="8_qpdqc"]
+[ext_resource type="PackedScene" uid="uid://cw6qhq5uy8i1k" path="res://scenes/components/test_scene_save_data_manager_component.tscn" id="9_qpdqc"]
 
 [node name="TestSceneCropField" type="Node2D" unique_id=344791666]
 
@@ -33,6 +38,9 @@ tile_set = ExtResource("2_c2013")
 [node name="TilledDirt" type="TileMapLayer" parent="GameTilemap" unique_id=941829609]
 tile_set = ExtResource("2_c2013")
 
+[node name="SaveDataComponent" parent="GameTilemap/TilledDirt" unique_id=251157095 instance=ExtResource("5_v35am")]
+save_data_resource = ExtResource("6_bddfb")
+
 [node name="DayNightCycleComponent" parent="." unique_id=1417850443 instance=ExtResource("4_qpdqc")]
 visible = false
 
@@ -43,3 +51,8 @@ position = Vector2(285, 351)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1053448993]
 zoom = Vector2(5, 5)
+
+[node name="SaveLevelDataComponent" parent="." unique_id=187565249 instance=ExtResource("7_q0cb8")]
+script = ExtResource("8_qpdqc")
+
+[node name="TestSceneSaveDataManagerComponent" parent="." unique_id=370752342 instance=ExtResource("9_qpdqc")]
