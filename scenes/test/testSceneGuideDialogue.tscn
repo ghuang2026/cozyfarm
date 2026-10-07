@@ -32,4 +32,3 @@ zoom = Vector2(3, 3)
 position = Vector2(326, 353)
 
 [node name="DayNightCycleComponent" parent="." unique_id=1417850443 instance=ExtResource("4_x8soh")]
-visible = false
