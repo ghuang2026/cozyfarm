@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bh8x61ef8iedy"]
+
+[ext_resource type="Texture2D" uid="uid://cqd6vks6axaij" path="res://assets/ui/uiSprites.png" id="1_am6vt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_molhy"]
+atlas = ExtResource("1_am6vt")
+region = Rect2(289, 114, 14, 14)
+
+[node name="InteractableLabelComponent" type="Control" unique_id=1016832941]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 18.0
+offset_bottom = 18.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=259302345]
+layout_mode = 0
+offset_right = 18.0
+offset_bottom = 18.0
+texture = SubResource("AtlasTexture_molhy")
+
+[node name="Label" type="Label" parent="." unique_id=477588839]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 2.0
+offset_right = 22.0
+offset_bottom = 17.0
+theme_override_font_sizes/font_size = 8
+text = "E"
+vertical_alignment = 1
