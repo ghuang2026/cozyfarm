@@ -189,7 +189,7 @@ position = Vector2(18, 20)
 sprite_frames = SubResource("SpriteFrames_molhy")
 animation = &"emote_01_idle"
 autoplay = "emote_01_idle"
-frame_progress = 0.43728286
+frame_progress = 0.22493301
 
 [node name="EmoteIdleTimer" type="Timer" parent="." unique_id=148970958]
 wait_time = 5.0
