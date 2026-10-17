@@ -4,7 +4,6 @@
 [ext_resource type="TileSet" uid="uid://dntf1v6em3ecw" path="res://tilesets/gameTileset.tres" id="2_18p73"]
 [ext_resource type="PackedScene" uid="uid://4ewegfhl6r7n" path="res://scenes/characters/player/player.tscn" id="3_yel8d"]
 [ext_resource type="PackedScene" uid="uid://dmsq2mtw4x6ml" path="res://scenes/characters/guide/guide.tscn" id="4_18p73"]
-[ext_resource type="PackedScene" uid="uid://b45ohue176uw4" path="res://scenes/components/dayNightCycleComponent.tscn" id="4_x8soh"]
 
 [node name="TestSceneGuideDialogue" type="Node2D" unique_id=344791666]
 
@@ -30,5 +29,3 @@ zoom = Vector2(3, 3)
 
 [node name="Guide" parent="." unique_id=941009179 instance=ExtResource("4_18p73")]
 position = Vector2(326, 353)
-
-[node name="DayNightCycleComponent" parent="." unique_id=1417850443 instance=ExtResource("4_x8soh")]
