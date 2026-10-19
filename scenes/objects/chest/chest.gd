@@ -59,6 +59,7 @@ func trigger_feed_harvest(inventory_item:String, scene:Resource) -> void:
 		var harvest_scene = scene.instantiate() as Node2D
 		harvest_scene.global_position = Vector2(global_position.x, global_position.y - food_drop_height)
 		get_tree().root.add_child(harvest_scene)
+		harvest_scene.add_to_group("no_collection")
 		var target_position = global_position
 		
 		var time_delay = randf_range(.5, 2.0)
@@ -80,6 +81,7 @@ func add_reward_scene() -> void:
 		var reward_position: Vector2i = random_position_in_circle(global_position, reward_drop_radius)
 		reward_scene.global_position = reward_position
 		get_tree().root.add_child(reward_scene)
+		
 
 func random_position_in_circle(center:Vector2, radius:int) -> Vector2i:
 	var angle = randf() * TAU
