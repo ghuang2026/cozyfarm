@@ -25,8 +25,8 @@ func on_inventory_changed() -> void:
 	if inventory.has("stone"):
 		stone_label.text = int_to_string(inventory["stone"])
 	
-	if inventory.has("wheat_spike"):
-		wheat_label.text = int_to_string(inventory["wheat_spike"])
+	if inventory.has("wheat"):
+		wheat_label.text = int_to_string(inventory["wheat"])
 	
 	if inventory.has("tomato_fruit"):
 		tomato_label.text = int_to_string(inventory["tomato_fruit"])
